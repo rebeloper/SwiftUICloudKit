@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9A245ED2337FC240071489A /* ListElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A245EC2337FC240071489A /* ListElement.swift */; };
+		C9A245F123381BD30071489A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A245F023381BD30071489A /* CloudKit.framework */; };
+		C9A245F523381DA70071489A /* CloudKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A245F423381DA70071489A /* CloudKitHelper.swift */; };
+		C9A245F9233820540071489A /* ListElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A245F8233820540071489A /* ListElements.swift */; };
 		C9E2DA242337EF4400A34C9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E2DA232337EF4400A34C9E /* AppDelegate.swift */; };
 		C9E2DA262337EF4400A34C9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E2DA252337EF4400A34C9E /* SceneDelegate.swift */; };
 		C9E2DA282337EF4400A34C9E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E2DA272337EF4400A34C9E /* ContentView.swift */; };
@@ -16,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C9A245EC2337FC240071489A /* ListElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListElement.swift; sourceTree = "<group>"; };
+		C9A245EE23381BC80071489A /* SwiftUICloudKitDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUICloudKitDemo.entitlements; sourceTree = "<group>"; };
+		C9A245F023381BD30071489A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		C9A245F423381DA70071489A /* CloudKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitHelper.swift; sourceTree = "<group>"; };
+		C9A245F8233820540071489A /* ListElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListElements.swift; sourceTree = "<group>"; };
 		C9E2DA202337EF4400A34C9E /* SwiftUICloudKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUICloudKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E2DA232337EF4400A34C9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9E2DA252337EF4400A34C9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +40,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9A245F123381BD30071489A /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C9A245EF23381BD30071489A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9A245F023381BD30071489A /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C9E2DA172337EF4300A34C9E = {
 			isa = PBXGroup;
 			children = (
 				C9E2DA222337EF4400A34C9E /* SwiftUICloudKitDemo */,
 				C9E2DA212337EF4400A34C9E /* Products */,
+				C9A245EF23381BD30071489A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,9 +75,13 @@
 		C9E2DA222337EF4400A34C9E /* SwiftUICloudKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C9A245EE23381BC80071489A /* SwiftUICloudKitDemo.entitlements */,
 				C9E2DA232337EF4400A34C9E /* AppDelegate.swift */,
 				C9E2DA252337EF4400A34C9E /* SceneDelegate.swift */,
 				C9E2DA272337EF4400A34C9E /* ContentView.swift */,
+				C9A245EC2337FC240071489A /* ListElement.swift */,
+				C9A245F423381DA70071489A /* CloudKitHelper.swift */,
+				C9A245F8233820540071489A /* ListElements.swift */,
 				C9E2DA292337EF4500A34C9E /* Assets.xcassets */,
 				C9E2DA2E2337EF4500A34C9E /* LaunchScreen.storyboard */,
 				C9E2DA312337EF4500A34C9E /* Info.plist */,
@@ -147,7 +170,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9E2DA242337EF4400A34C9E /* AppDelegate.swift in Sources */,
+				C9A245F9233820540071489A /* ListElements.swift in Sources */,
 				C9E2DA262337EF4400A34C9E /* SceneDelegate.swift in Sources */,
+				C9A245ED2337FC240071489A /* ListElement.swift in Sources */,
+				C9A245F523381DA70071489A /* CloudKitHelper.swift in Sources */,
 				C9E2DA282337EF4400A34C9E /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +310,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SwiftUICloudKitDemo/SwiftUICloudKitDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUICloudKitDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = R252PR8AVU;
@@ -304,6 +331,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SwiftUICloudKitDemo/SwiftUICloudKitDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUICloudKitDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = R252PR8AVU;
