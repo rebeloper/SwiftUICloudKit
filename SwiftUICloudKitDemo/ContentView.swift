@@ -6,6 +6,10 @@
 //  Copyright © 2019 Alex Nagy. All rights reserved.
 //
 
+// MARK: - notes
+// please refer to this playlist when you have questions about the layout
+// https://www.youtube.com/watch?v=zucwLZoCs8w&list=PL_csAAO9PQ8Z1pbr-u6dSmDQTLZzDgcaP
+
 import SwiftUI
 
 struct ContentView: View {
@@ -25,6 +29,7 @@ struct ContentView: View {
                         Button("Add") {
                             if !self.newItem.text.isEmpty {
                                 let newItem = ListElement(text: self.newItem.text)
+                                // MARK: - saving to CloudKit
                                 CloudKitHelper.save(item: newItem) { (result) in
                                     switch result { 
                                     case .success(let newItem):
@@ -42,6 +47,7 @@ struct ContentView: View {
                         TextField("Edit Item", text: self.$editedItem.text)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                         Button("Done") {
+                            // MARK: - modify in CloudKit
                             CloudKitHelper.modify(item: self.editedItem) { (result) in
                                 switch result {
                                 case .success(let item):
@@ -81,6 +87,7 @@ struct ContentView: View {
                         .onLongPressGesture {
                             if !self.showEditTextField {
                                 guard let recordID = item.recordID else { return }
+                                // MARK: - delete from CloudKit
                                 CloudKitHelper.delete(recordID: recordID) { (result) in
                                     switch result {
                                     case .success(let recordID):
@@ -101,6 +108,7 @@ struct ContentView: View {
             .navigationBarTitle(Text("SwiftUI with CloudKit"))
         }
         .onAppear {
+            // MARK: - fetch from CloudKit
             CloudKitHelper.fetch { (result) in
                 switch result {
                 case .success(let newItem):

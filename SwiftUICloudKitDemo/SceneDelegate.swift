@@ -12,6 +12,10 @@ import SwiftUI
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    
+    // MARK: - note
+    // declating items here to be able to feed them as an environment object of ContentView, so it will be available throughout the whole app
+    // https://youtu.be/iH88uJcdzDM?t=757
     var items = ListElements()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -20,6 +24,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Create the SwiftUI view that provides the window contents.
+        // MARK: - note
+        // adding environment object too
+        // https://youtu.be/iH88uJcdzDM?t=757
         let contentView = ContentView().environmentObject(items)
 
         // Use a UIHostingController as window root view controller.
