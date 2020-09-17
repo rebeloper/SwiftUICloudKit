@@ -10,3 +10,8 @@ swift icloud key value
 cloudkit swift 5
 swift icloud database
 [This SwiftUI tutorial will teach you how to save to CloudKit!](https://www.youtube.com/watch?v=_wMsY7F9brA&list=PL_csAAO9PQ8aZ2kmFmyfTNfiRBZZTMpt1)
+
+https://www.youtube.com/watch?v=_wMsY7F9brA&list=PL_csAAO9PQ8aZ2kmFmyfTNfiRBZZTMpt1&index=1
+
+
+https://www.youtube.com/watch?v=bVSbRnHcXrA&list=PL_csAAO9PQ8aZ2kmFmyfTNfiRBZZTMpt1&index=2
